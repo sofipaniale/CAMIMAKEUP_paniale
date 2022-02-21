@@ -12,11 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Josefin+Sans:wght@100;200;400&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logocm_blanco.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
 
+    
 
     <title>CAMI MAKE UP</title>
 </head>
-<body id="container">
+<body id="body_container">
 
    <header id="header" class="header_fixed">
         
@@ -41,8 +44,9 @@
             </ul>
        </nav>
     </header>
+
     <main id="main">
-        <!--agrego el breadcrumb para que quede inmediatamente debajo del nav-->
+        
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">CAMI MAKE UP</li>
@@ -72,17 +76,18 @@
             </a>
         </div>
 
-          <hr class="separador">
-        <!--sección SOBRE CAMI MAKE UP-->
-          <h1>SOBRE CAMI MAKE UP</h1>
+        <hr class="separador">
 
-        <section class="slide_productos_container">  
-          <div class="slide_productos">
-            <img class="prod_item" src="img/prod_slide.jpg" alt="">
+        <!--sección SOBRE CAMI MAKE UP-->
+        <h1>SOBRE CAMI MAKE UP</h1>
+
+        <section class="slide_about_container">  
+          <div class="slide_about">
+            <img class="about_item" src="img/prod_slide.jpg" alt="">
           </div>
-          <div class="txt_slide_productos">
-            <h3>
-              Soy Cami, maquilladora profesional en Córdoba. Te invito recorrer mi paágina para que conozcas los servicios y productos que ofrezo. Con mi experiencia y tu inspiración podemos lograr el mejor make up.
+          <div class="txt_slide_about">
+            <h3 class="wow slideInRight" data-wow-delay="2s">
+              Soy Cami, maquilladora profesional en Córdoba. Te invito recorrer mi página para que conozcas los servicios y productos que ofrezo. Con mi experiencia y tu inspiración podemos lograr el mejor make up.
             </h3>
           </div>
         </section> 
@@ -90,61 +95,87 @@
         <hr class="separador">
 
         <!--sección de cards con link hacia SERVICIOS-->
-      <section id="section-servicios">
-          <div>
-              <h2>
-                  MIS SERVICIOS MAQUILLAJE PROFESIONAL
-              </h2>
-          </div>
+        <h2>MIS SERVICIOS DE MAQUILLAJE PROFESIONAL</h2>
+
+        <section class="section-servicios">
           <div class="card-group">
-              <div class="card>
-                <img src="img/novia2.jpg" class="card-img-top" alt="novias_card" >
-                <div class="card-body">
-                  <h5 class="card-title">NOVIXS</h5>
-                  <p class="card-text">Maquillaje de bodas. Descubrí como puedo hacerte brillar en un día tan importante.</p>
-                </div>
-              </div>
-              <div class="card>
-                <img src="img/book3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">SOCIAL</h5>
-                  <p class="card-text">Maquillaje para eventos sociales. Make up para hacerte resaltar entre la multitud.</p>
-                </div>
-              </div>
-              <div class="card>
-                <img src="/especiales3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">ARTÍSTICO</h5>
-                  <p class="card-text">Maquillaje para eventos especiales. Podemos inspirarnos mutuamente para lograr un trabajo brillante.</p>
-                </div>
+            <div class="card">
+              <a href="html/servicios.html">
+              <img class="card-img-top" src="img/cards1.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">NOVIXS</h5>
+                <p class="card-text">Maquillaje de bodas. Descubrí como puedo hacerte brillar en un día tan importante.</p>
+                </a>
               </div>
             </div>
+            <div class="card">
+              <a href="html/servicios.html">
+              <img class="card-img-top" src="img/cards2.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">SOCIAL</h5>
+                <p class="card-text">Maquillaje para eventos sociales. Make up para hacerte resaltar entre la multitud.</p>
+              </a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="html/servicios.html">
+              <img class="card-img-top" src="img/cards3.jpg"  alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">ESPECIALES</h5>
+                <p class="card-text">Maquillaje para eventos especiales. Podemos inspirarnos mutuamente para lograr un trabajo brillante.</p>
+              </a>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+
+        <hr class="separador">
+  
+
+      <!-- seccion con link a CONTACTOS-->
+      <h2>CONTACTAME PARA CONSULTAS O TURNOS</h2>
+
+
+      <section class="section-contacto wow backInUp animated" data-wow-delay="2s">
+        <img src="img/contacto-home.jpg" alt="">
+        <button type="button" class="btn btn-outline-secondary">
+          <a href="html/contacto.html">AGENDÁ TU TURNO O CONSULTA</a>
+        </button> 
       </section>
 
+    </main>
     <!--comienzo del footer-->
-    <footer id="footer">
-      <div> 
-        <p>DESCUBRÍ MÁS</p>  
-      </div>
+  <footer id="footer">
+    <div> 
+      <p>DESCUBRÍ MÁS</p>  
+    </div>
 
-      <ul class="footer">
-          <li>
-              <a href="#">
-                  <img src="img/instagram.png" width="30px" alt="">
-              </a>
-          </li>
-          <li>
-              <a href="html/contacto.html">
-                  <img src="img/wspp.png" width="30px" alt="">
-              </a>
-          </li>
-      </ul>
+    <ul class="footer>
+        <li>
+           <a href="#">
+              <img src="img/instagram.png" width="30px" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="html/contacto.html">
+                <img src="img/wspp.png" width="30px" alt="">
+            </a>
+        </li>
+    </ul>
 
-      <div class="footer">
-          <p>&copy Copyright 2022 CamiMakeUp.</p>
-      </div>    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+    <div class="copy">
+        <p>&copy Copyright 2022 CamiMakeUp.</p>
+    </div>
+  </footer>    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+  <script src="js/wow.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+    
+
 </body>
 </html>
