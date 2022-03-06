@@ -29,30 +29,12 @@ $gradient_background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.1)
         font-family: 'Comfortaa', sans-serif;
 }
 
-%fade_in {
-        opacity: 0;
-        transition: opacity 0.9s ease-in-out;
-        position: absolute;
-        
+%texto_slide {
+    font-size: 24px;
+    font-weight:300;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
 }
-
-@keyframes cambiodefondo {
-    0% {opacity: 0}
-    50% {opacity:0.5}
-    100% {opacity: 1;}
-}
-
-@keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 200%;
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
 
 
 body {
@@ -80,7 +62,7 @@ header {
     @include sizes(100%, 100px);
     background-color: $background_header_footer;
     display:flex;
-    z-index: 1000;
+ 
 
     label {
         display: none;
@@ -131,8 +113,7 @@ header {
                 
     
             &:hover{
-                background-color: rgba(0,0,0,0.3);
-                @include sizes (150px, 100px)
+                background-color:  rgba(159, 182, 191, 0.8);
             }
                      
             }
@@ -156,6 +137,31 @@ header {
     flex-direction: column;
     justify-content: center;
 
+    nav {
+        background-color: #e9ecef;
+        width: 100%;
+
+  
+  
+
+
+        ol{
+            background-color: #e9ecef;
+            padding:0;
+
+        }
+
+
+        ol li{
+            font-size: 16px;
+            font-weight:400;
+            font-family: 'Comfortaa', serif;
+            color: #000;
+
+        }
+        
+    }
+
     form{
         text-align: center;
         align-self:center;
@@ -167,8 +173,8 @@ header {
     }
     
     input{
-        background-color: #024059;
-        width: 25%;
+        background-color: $background_header_footer;
+        width: 50%;
         margin: 20px;
         border: solid 1px #F2F2F2;
         padding:10px;
@@ -179,11 +185,11 @@ header {
     }
     
     textarea{
-        background-color: #024059;
-        width: 25%;
+        background-color: $background_header_footer;
+        width: 50%;
         margin: 20px;
-        border: solid 1px #F2F2F2;
         padding:10px;
+        border: solid 1px #F2F2F2;
         text-align: center;
         font-family: 'Josefin Sans', sans-serif;
         font-size:20px;
@@ -192,11 +198,9 @@ header {
     }
     
     .texto {
-        text-align: center;
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 30px;
-        font-weight: 300; 
-        padding: 60px;
+        margin: 20px 50px;
+        padding: 20px;
+        @extend %texto_slide;
     
     }
 
@@ -204,14 +208,13 @@ header {
 }
 
 
-
-
     #footer{
         grid-area: footer;
         height: 100px;
         display: flex;
         background-color: $background_header_footer;
-        padding: 20px 20px;
+        padding: 20px 20px 0px 20px;
+        
         
         
         p{
@@ -232,7 +235,8 @@ header {
         }
     
         .copy{
-            transform: translate(90%,90%);
+            transform: translate(110%,0%);
+            align-self: flex-end;
         }
     }
     
@@ -240,7 +244,6 @@ header {
     
     
         header {
-            position: absolute;
             display: block; 
     
             label{
@@ -288,19 +291,12 @@ header {
        
         }
     
-        #main{
-    
-        }
-    
-    
-            #btn_menu:checked + .menu_inline{
+        #btn_menu:checked + .menu_inline{
          
-                display: flex;
-                
-            }
-    
+            display: flex;
+            
         }
          
        
         
-    
+    }
